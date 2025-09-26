@@ -4,16 +4,16 @@ const contacts = require("../controllers/contact.controller");
 const router = express.Router();
 
 router.route("/")
-  .get(contacts.findAll)       // Lấy tất cả contact
-  .post(contacts.create)       // Tạo contact mới
-  .delete(contacts.deleteAll); // Xóa tất cả contact
+  .get(contacts.findAll)
+  .post(contacts.create)
+  .delete(contacts.deleteAll);
 
 router.route("/favorite")
-  .get(contacts.findAllFavorite); // Lấy các contact yêu thích
+  .get(contacts.findAllFavorite);
 
 router.route("/:id")
-  .get(contacts.findOne)      // Lấy 1 contact theo id
-  .put(contacts.update)       // Cập nhật contact theo id
-  .delete(contacts.delete);   // Xóa contact theo id
+  .get(contacts.findOne)
+  .put(contacts.update)
+  .delete(contacts.delete);
 
 module.exports = router;
